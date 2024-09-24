@@ -1,5 +1,7 @@
 ###
-
+<div align="center">
+  <img height="150" src="./img/perfil.jpg" />
+</div>
 <div align="center">
   <a href="https://www.linkedin.com/authwall?trkInfo=AQFNoCsq0ZCwKAAAAZIhcSwwwEkiMGkAx_-VT1XH8-2KizDH3OpAUNmvj52kaBBxfoeWdTCZ-IQv4DdPq--y4i-ljsBdKHCAaT4GD5XC8kFYqjN1xEdo9aFzKIze6ejjTkDLL00=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Frubenalbertocarmona%2F" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
