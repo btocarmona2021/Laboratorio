@@ -1,0 +1,61 @@
+body{
+    background-color: #333;
+}
+.formulario{
+    margin: 0 auto;
+    width: 500px;
+    background-color: #555555;
+    height: auto;
+    color: white;
+    padding: 20px;
+    font-family: Orbitron, sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 0 6px 1px;
+}
+input, label, textarea{
+    width: 100%;
+    display: block;
+    font-family: Orbitron, sans-serif;
+    border-radius: 5px;
+}
+input,textarea{
+    margin-bottom: 10px;
+    height: 25px;
+}
+.radio,.desc{
+    width:31%;
+    float: left;
+    text-align: center;
+}
+.tabla{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: darkslategray;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 1px white;
+}
+.tabla thead{
+    background-color: #555555;
+    height: 30px;
+}
+.tabla td{
+    border: 2px solid black;
+    width: 50%;
+    height: 25px;
+    padding: 0 10px;
+}
+#btn{
+    margin: 20px 0;
+    height: 40px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#btn:hover{
+    background-color: darkslategray;
+    border: 2px solid white;
+    color: white;
+    transform: scale(1.05);
+}

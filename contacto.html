@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./acercade.html">Acerca de mí</a>
+        <a href="./juego.html">Juego</a>
+    </nav>
+</header>
+<form class="formulario" action="">
+    <h1>Contacto</h1>
+    <label for="nombre">Nombre: (requerido)</label>
+    <input type="text" name="nombre" id="nombre" maxlength="20" required placeholder="Ingresa tu Nombre">
+
+    <label for="apellido">Apellido</label>
+    <input type="text" name="apellido" id="apellido" maxlength="20" placeholder="Ingresa tu Apellido">
+
+    <label for="email">Email: (requerido)</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="telefono">teléfno</label>
+    <input type="text" name="telefono" id="telefono" placeholder="XXX XXXXXX">
+    <p id="ayuda">Formato: 2920 286545 (4 dígitos + espacio + 6 dígitos)</p>
+
+    <label for="edad">Ingrese su edad</label>
+    <input type="number" id="edad" min="16" max="120">
+
+    <label for="direccion">Dirección</label>
+    <textarea name="direccion" cols="40" rows="4" id="direccion"></textarea>
+
+    <label for="provincia">Provincia:</label>
+    <input list="ppatagonicas" id="provincia" placeholder="Ingresa tu provincia">
+    <datalist id="ppatagonicas">
+        <option value="Chubut">
+        <option value="Neuquén">
+        <option value="Río Negro">
+        <option value="Santa Cruz">
+        <option value="Tierra del Fuego">
+    </datalist>
+
+    <label for="cp">Código Postal</label>
+    <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="^[A-Za-z]\d{4}[A-Za-z]{2}$">
+
+    <fieldset>
+        <legend>Método preferido de contacto</legend>
+        <input class="radio" type="radio" name="contacto" id="contacto1" checked>
+        <input class="radio" type="radio" name="contacto" id="contacto2">
+        <input class="radio" type="radio" name="contacto" id="contacto3">
+        <label class="desc" for="contacto1">Correo Electrónico</label>
+        <label class="desc" for="contacto2">Correo Postal</label>
+        <label class="desc" for="contacto3">Teléfono</label>
+    </fieldset>
+    <fieldset>
+        <legend>Tipo de suscripción</legend>
+        <input class="radio" type="checkbox" name="promociones" id="promociones">
+        <input class="radio" type="checkbox" name="alertas" id="alertas" checked>
+        <input class="radio" type="checkbox" name="eventos" id="eventos">
+        <label class="desc" for="promociones">Promociones</label>
+        <label class="desc" for="alertas">Alertas</label>
+        <label class="desc" for="eventos">Eventos</label>
+    </fieldset>
+    <input type="button" name="btn" id="btn" value="Cargar">
+
+    <table class="tabla">
+        <thead>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nombre</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Apellido</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Teléfono</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Dirección</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Provincia</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Código Postal</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Contacto</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Suscripción</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>

@@ -43,6 +43,7 @@ a {
     cursor: pointer;
 }
 main{
+    height: 220px;
     background-color: darkslategray;
     text-align: center;
     padding: 10px 0;
@@ -51,7 +52,16 @@ main h3{
     margin: 0;
     padding: 10px;
 }
-main img{
+aside{
+    width: 300px;
+    height: 200px;
+    background-color: #567979;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 0 5px 0 wheat ;
+    float: left;
+}
+main img, aside img{
     width: 200px;
     border-radius: 10px;
     box-shadow: 0 0 4px 1px whitesmoke;
@@ -69,6 +79,7 @@ main p{
     box-shadow: 1px 1px 4px whitesmoke ;
 }
 footer{
+    clear: left;
     background-color: #333;
     text-align: center;
     padding: 10px;
