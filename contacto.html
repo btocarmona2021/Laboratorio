@@ -47,7 +47,8 @@
     </datalist>
 
     <label for="cp">Código Postal</label>
-    <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="^[A-Za-z]\d{4}[A-Za-z]{2}$">
+<!--    AGREGUE EL REQUIRED PARA PODER VALIDAR EL PATTERN, NO LO SOLICITABA LA CONSIGNA POR ESO ACLARO-->
+    <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="^[A-Za-z]\d{4}[A-Za-z]{2}$" required>
 
     <fieldset>
         <legend>Método preferido de contacto</legend>
@@ -68,6 +69,8 @@
         <label class="desc" for="eventos">Eventos</label>
     </fieldset>
     <input type="button" name="btn" id="btn" value="Cargar">
+<!--    AGREGUE UN SUBMIT Y UN REQUIRED EN EL CODIGO POSTAL PARA QUE DE ESA MANERA FUNCIONE EL PATTERN-->
+    <input type="submit" value="submit">
 
     <table class="tabla">
         <thead>
