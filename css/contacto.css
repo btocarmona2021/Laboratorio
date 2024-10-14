@@ -3,7 +3,6 @@ body{
 }
 .formulario{
     margin: 0 auto;
-    width: 500px;
     background-color: #555555;
     height: auto;
     color: white;
@@ -22,6 +21,11 @@ input,textarea{
     margin-bottom: 10px;
     margin-top: 3px;
     height: 25px;
+    padding-left: 10px;
+}
+.campos{
+    border-radius: 8px;
+    padding: 15px;
 }
 .radio,.desc{
     width:31%;
@@ -40,17 +44,19 @@ input,textarea{
 .tabla thead{
     background-color: #555555;
     height: 30px;
+    font-size: 0.75em;
 }
 .tabla td{
     border: 2px solid black;
     width: 50%;
     height: 25px;
     padding: 0 10px;
+    font-size: 0.75em;
 }
 #btn{
     margin: 20px 0;
     height: 40px;
-    font-size: 22px;
+    font-size: 1.25em;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -59,4 +65,37 @@ input,textarea{
     border: 2px solid white;
     color: white;
     transform: scale(1.05);
+}
+.fx:focus-within{
+    box-shadow: 0 0 7px 2px darkmagenta;
+}
+.contenedorTabla{
+    margin: 20px auto;
+    width: 40%;
+}
+/* Desde 100px hasta 768px, el formulario será del 86% */
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+    .formulario {
+        width: 70%;
+        font-size: 0.65rem;
+    }
+    .contenedorTabla{
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+ .formulario{
+        width: 60%;
+    }
+    .contenedorTabla{
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1001px) {
+    .formulario {
+        width: 34%;
+    }
+    .contenedorTabla{
+        width: 40%;
+    }
 }
