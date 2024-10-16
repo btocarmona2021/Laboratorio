@@ -97,7 +97,9 @@ aside {
     height: 460px;
     display: flex;
     flex-direction: column;
-    background-color: #03506d;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(3, 80, 109, 0.89);
 }
 
 aside img {
@@ -107,6 +109,9 @@ aside img {
 }
 
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     height: auto;
     background-color: #03506d;
