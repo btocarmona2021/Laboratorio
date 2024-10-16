@@ -1,0 +1,17 @@
+.contendor__acerca{
+    display: flex;
+}
+main{
+    padding: 20px;
+}
+.contendor__acerca main img{
+    width: 200px;
+}
+@media only screen and (min-width: 300px) and (max-width: 720px){
+    .contendor__acerca{
+        flex-direction: column;
+    }
+    main{
+        height: auto;
+    }
+}

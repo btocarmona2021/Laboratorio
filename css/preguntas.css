@@ -1,0 +1,10 @@
+.contenedor{
+    height: auto;
+}
+.contenedor main{
+    height: auto;
+    padding: 20px;
+}
+.contenedor main img{
+    width: 80px;
+}

@@ -1,97 +1,213 @@
-* {
-    margin: 0 auto;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Chackra;
+    src: url("../fonts/Chakra Petch-Regular.ttf") format("truetype");
+    font-style: normal;
+}
+
+body {
+    margin: 0;
     padding: 0;
+    font-family: Chackra, serif;
 }
 
-header {
+.cabecera {
     width: 100%;
-    height: 140px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    padding: 0 25px;
 }
 
-nav {
+.cabecera__menu--titulo {
+    display: inline-block;
+}
+
+.cabecera__menu--subtitulo {
+    display: inline-block;
+}
+
+.cabecera__menu {
+    display: flex;
+    gap: 20px;
+    background-color: #555555;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px darkgray;
+}
+
+.cabecera__contenedor {
+    position: relative;
+    width: 500px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #555555;
+    padding: 0 30px;
+    transition: 0.3s;
+}
+
+.cabecera__contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: right;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.cabecera__menu--titulo {
+    color: #333333;
+}
+
+.cabecera__menu--subtitulo {
+    color: darkgray;
+}
+
+.cabecera__menu--item {
+    text-decoration: none;
+    height: auto;
+    color: #d3d3d3;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    background-color: #333333;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.contenedor {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    background-color: #333;
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px 0;
+}
+aside {
+    width: 20%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    background-color: #03506d;
 }
 
-h1 {
-    font-family: Orbitron, sans-serif;
-    font-size: 30px;
+aside img {
+    width: 200px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 1px 4px;
 }
 
-h3 {
-    font-family: "Lucida Sans", sans-serif;
-    font-size: 24px;
-    color: darkorange;
-    margin: 10px 0;
-}
-
-a {
-    display: inline-block;
-    font-family: "Franklin Gothic Medium",sans-serif;
-    font-size: 18px ;
-    background-color: whitesmoke;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 4px;
-    border: 2px solid #333;
-    box-shadow: 0 0 4px 1px whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-}
-main{
+main {
+    width: 80%;
     height: auto;
-    background-color: darkslategray;
+    background-color: #03506d;
     text-align: center;
-    padding: 10px 0;
 }
 main h3{
     margin: 0;
-    padding: 10px;
+    font-size: 1.8em;
 }
-aside{
-    width: 300px;
-    height: 200px;
-    background-color: #567979;
-    padding: 20px;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 2px 0 5px 0 wheat ;
-    float: left;
-}
-main img, aside img{
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0 4px 1px whitesmoke;
-    border: 1px solid #333;
-}
-main p{
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    padding: 15px 0;
     color: whitesmoke;
-    line-height: 20px;
-    text-align: justify;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #555;
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px whitesmoke ;
 }
-footer{
-    clear: left;
-    background-color: #333;
-    text-align: center;
-    padding: 10px;
+
+footer img {
+    width: 64px;
 }
-footer img{
-    width: 60px;
-    margin: 10px;
+
+/* iPhone 12 Pro */
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    /* Estilos específicos para iPhone 12 Pro */
+    .cabecera {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .cabecera__menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cabecera__menu--item {
+        text-align: center;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    main {
+        width: 100%;
+        height: 300px;
+    }
 }
-footer p{
-    color: whitesmoke;
-    font-family: Orbitron,sans-serif;
+
+footer {
+}
+
+/* iPad */
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+    /* Estilos específicos para iPhone 12 Pro */
+    .cabecera {
+        padding: 0;
+    }
+
+    .cabecera__contenedor {
+        text-align: center;
+    }
+
+    .cabecera__menu--item {
+        width: 180px;
+    }
+
+    .cabecera__menu {
+        width: 100%;
+        height: 180px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cabecera__contenedor:hover {
+        transform: translateX(30px);
+
+        .cabecera__menu--titulo {
+            color: whitesmoke;
+        }
+    }
+}
+
+/* MacBook Pro */
+@media only screen and (min-width: 1367px) {
+    .cabecera__contenedor:hover {
+        transform: translateX(200px);
+
+        .cabecera__menu--titulo {
+            color: whitesmoke;
+        }
+    }
 }
