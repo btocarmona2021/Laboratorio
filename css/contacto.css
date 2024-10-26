@@ -1,11 +1,17 @@
-body{
+body {
     position: relative;
     background-color: #333;
     background-size: cover;
     background-position: right;
 
 }
-body::before{
+
+.espaciador {
+    width: 100%;
+    height: 180px;
+}
+
+body::before {
     content: "";
     position: absolute;
     top: 0;
@@ -18,13 +24,15 @@ body::before{
     opacity: 0.2;
     z-index: -1;
 }
-.contenedor{
+
+.contenedor {
     padding: 20px 0;
     display: flex;
     align-items: start;
     justify-content: center;
 }
-.contenedor__formulario{
+
+.contenedor__formulario {
     margin: 0 40px;
     background-color: #555555;
     height: auto;
@@ -34,33 +42,39 @@ body::before{
     border-radius: 8px;
     box-shadow: 0 0 6px 1px;
 }
-.contenedor__mapa{
+
+.contenedor__mapa {
     padding: 5px;
     border-radius: 10px;
     background-color: #03506d;
 }
-input, label, textarea{
+
+input, label, textarea {
     width: 100%;
     display: block;
     font-family: Orbitron, sans-serif;
     border-radius: 5px;
 }
-input,textarea{
+
+input, textarea {
     margin-bottom: 10px;
     margin-top: 3px;
     height: 25px;
     padding-left: 10px;
 }
-.campos{
+
+.campos {
     border-radius: 8px;
     padding: 15px;
 }
-.radio,.desc{
-    width:31%;
+
+.radio, .desc {
+    width: 31%;
     float: left;
     text-align: center;
 }
-.tabla{
+
+.tabla {
     width: 90%;
     height: auto;
     margin: 0 auto;
@@ -69,38 +83,45 @@ input,textarea{
     border-radius: 8px;
     box-shadow: 0 0 4px 1px white;
 }
-.tabla thead{
+
+.tabla thead {
     background-color: #555555;
     height: 30px;
     font-size: 0.75em;
 }
-.tabla td{
+
+.tabla td {
     border: 2px solid black;
     width: 50%;
     height: 25px;
     padding: 0 10px;
     font-size: 0.75em;
 }
-#btn{
+
+#btn {
     margin: 20px 0;
     height: 40px;
     font-size: 1.25em;
     cursor: pointer;
     transition: 0.3s;
 }
-#btn:hover{
+
+#btn:hover {
     background-color: darkslategray;
     border: 2px solid white;
     color: white;
     transform: scale(1.05);
 }
-.fx:focus-within{
+
+.fx:focus-within {
     box-shadow: 0 0 7px 2px darkmagenta;
 }
-.contenedorTabla{
+
+.contenedorTabla {
     margin: 20px auto;
     width: 40%;
 }
+
 /* Desde 100px hasta 768px, el formulario será del 86% */
 @media only screen and (min-width: 200px) and (max-width: 600px) {
     .contenedor__formulario {
@@ -108,23 +129,28 @@ input,textarea{
         font-size: 0.65rem;
         margin: 0 auto;
     }
-    .contenedorTabla{
+
+    .contenedorTabla {
         width: 98%;
     }
 }
+
 @media only screen and (min-width: 601px) and (max-width: 1000px) {
- .contenedor__formulario{
+    .contenedor__formulario {
         width: 60%;
     }
-    .contenedorTabla{
+
+    .contenedorTabla {
         width: 60%;
     }
 }
+
 @media only screen and (min-width: 1001px) {
     .contenedor__formulario {
         width: 34%;
     }
-    .contenedorTabla{
+
+    .contenedorTabla {
         width: 40%;
     }
 }
