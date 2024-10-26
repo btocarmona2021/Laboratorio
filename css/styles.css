@@ -192,13 +192,18 @@ footer {
         transform: translateY(-10px);
         background-color: darkred;
         opacity: 1;
-        box-shadow:  0 0 8px 1px whitesmoke;
+        box-shadow: 0 0 8px 1px whitesmoke;
     }
 
 }
 
 footer img {
     width: 64px;
+}
+
+
+.logo_y_bienvenida {
+    background-color: aqua;
 }
 
 /* iPhone 12 Pro */
@@ -243,9 +248,8 @@ footer img {
 }
 
 
-/* iPad */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
-    /* Estilos específicos para iPhone 12 Pro */
+    /* Estilos específicos para iPad */
     .cabecera {
         padding: 0;
     }
@@ -268,20 +272,20 @@ footer img {
 
     .cabecera__contenedor:hover {
         transform: translateX(30px);
+    }
 
-        .cabecera__menu--titulo {
-            color: whitesmoke;
-        }
+    .cabecera__contenedor:hover .cabecera__menu--titulo {
+        color: whitesmoke;
     }
 }
 
-/* MacBook Pro */
+
 @media only screen and (min-width: 1367px) {
     .cabecera__contenedor:hover {
         transform: translateX(200px);
+    }
 
-        .cabecera__menu--titulo {
-            color: whitesmoke;
-        }
+    .cabecera__contenedor:hover .cabecera__menu--titulo {
+        color: whitesmoke;
     }
 }
