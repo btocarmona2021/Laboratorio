@@ -3,6 +3,7 @@ body{
     background-color: #333;
     background-size: cover;
     background-position: right;
+
 }
 body::before{
     content: "";
@@ -17,16 +18,26 @@ body::before{
     opacity: 0.2;
     z-index: -1;
 }
-
-.formulario{
-    margin: 10px auto;
+.contenedor{
+    padding: 20px 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.contenedor__formulario{
+    margin: 0 40px;
     background-color: #555555;
     height: auto;
     color: white;
-    padding: 20px;
+    padding: 10px;
     font-family: Orbitron, sans-serif;
     border-radius: 8px;
     box-shadow: 0 0 6px 1px;
+}
+.contenedor__mapa{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #03506d;
 }
 input, label, textarea{
     width: 100%;
@@ -92,16 +103,17 @@ input,textarea{
 }
 /* Desde 100px hasta 768px, el formulario será del 86% */
 @media only screen and (min-width: 200px) and (max-width: 600px) {
-    .formulario {
-        width: 90%;
+    .contenedor__formulario {
+        width: 98%;
         font-size: 0.65rem;
+        margin: 0 auto;
     }
     .contenedorTabla{
-        width: 90%;
+        width: 98%;
     }
 }
 @media only screen and (min-width: 601px) and (max-width: 1000px) {
- .formulario{
+ .contenedor__formulario{
         width: 60%;
     }
     .contenedorTabla{
@@ -109,7 +121,7 @@ input,textarea{
     }
 }
 @media only screen and (min-width: 1001px) {
-    .formulario {
+    .contenedor__formulario {
         width: 34%;
     }
     .contenedorTabla{

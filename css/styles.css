@@ -11,19 +11,26 @@
 }
 
 body {
+    /*position: relative;*/
     margin: 0;
     padding: 0;
     font-family: Chackra, serif;
 }
 
 .cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333333;
+    background-color: #444444;
     padding: 0 25px;
+    box-shadow: 1px 1px 3px darkgray;
+    opacity: 0.98;
+    z-index: 1;
 }
 
 .cabecera__menu--titulo {
@@ -40,7 +47,6 @@ body {
     background-color: #555555;
     padding: 15px;
     border-radius: 4px;
-    box-shadow: 1px 1px 3px darkgray;
 }
 
 .cabecera__contenedor {
@@ -89,12 +95,43 @@ body {
 }
 
 .contenedor {
+    margin-top: 180px;
     display: flex;
     justify-content: space-between;
 }
+.logo_y_bienvenida{
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #555555;
+    border-radius: 8px;
+    opacity: 0.8;
+
+}
+.bienvenida__logo{
+    width: 120px;
+    height: 120px;
+    animation: logo_animacion 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo_animacion {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform:rotate(360deg);
+
+    }
+}
+
 aside {
     width: 20%;
-    height: 460px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -131,6 +168,34 @@ footer {
     padding: 15px 0;
     color: whitesmoke;
 }
+.up_arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #03506d;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    animation: up_arrow_animacion 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes up_arrow_animacion {
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(-10px);
+        background-color: darkred;
+        opacity: 1;
+        box-shadow:  0 0 8px 1px whitesmoke;
+    }
+
+}
 
 footer img {
     width: 64px;
@@ -153,6 +218,7 @@ footer img {
         text-align: center;
     }
     .contenedor{
+        margin-top: 450px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -170,10 +236,12 @@ footer img {
         width: 100%;
         height: 300px;
     }
+
+    .logo_y_bienvenida{
+        width: 100%;
+    }
 }
 
-footer {
-}
 
 /* iPad */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {

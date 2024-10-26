@@ -8,7 +8,7 @@
     <title>Contacto</title>
 </head>
 <body>
-<header class="cabecera">
+<header class="cabecera" >
     <div class="cabecera__contenedor">
         <h1 class="cabecera__menu--titulo">Carmona Ruben Alberto</h1>
         <h3 class="cabecera__menu--subtitulo">Página Personal</h3>
@@ -19,64 +19,66 @@
         <a class="cabecera__menu--item" href="./juego.html">Juego</a>
         <a class="cabecera__menu--item" href="./preguntas.html">Preguntas</a>
     </nav>
-</header>
-<form class="formulario" action="">
-    <h1>Contacto</h1>
-    <label for="nombre">Nombre: (requerido)</label>
-    <input class="fx" type="text" name="nombre" id="nombre" maxlength="20" required placeholder="Ingresa tu Nombre">
+</header >
+<div class="contenedor" id="up">
+       <form class="contenedor__formulario" action="">
+        <h1>Contacto</h1>
+        <label for="nombre">Nombre: (requerido)</label>
+        <input class="fx" type="text" name="nombre" id="nombre" maxlength="20" required placeholder="Ingresa tu Nombre">
 
-    <label for="apellido">Apellido</label>
-    <input class="fx" type="text" name="apellido" id="apellido" maxlength="20" placeholder="Ingresa tu Apellido">
+        <label for="apellido">Apellido</label>
+        <input class="fx" type="text" name="apellido" id="apellido" maxlength="20" placeholder="Ingresa tu Apellido">
 
-    <label for="email">Email: (requerido)</label>
-    <input class="fx" type="email" name="email" id="email" required>
+        <label for="email">Email: (requerido)</label>
+        <input class="fx" type="email" name="email" id="email" required>
 
-    <label for="telefono">teléfno</label>
-    <input class="fx" type="tel" name="telefono" id="telefono" placeholder="XXX XXXXXX" onclick="quitarAyuda()">
-    <p id="ayuda">Formato: 2920 286545 (4 dígitos + espacio + 6 dígitos)</p>
+        <label for="telefono">teléfno</label>
+        <input class="fx" type="tel" name="telefono" id="telefono" placeholder="XXX XXXXXX" onclick="quitarAyuda()">
+        <p id="ayuda">Formato: 2920 286545 (4 dígitos + espacio + 6 dígitos)</p>
 
-    <label for="edad">Ingrese su edad</label>
-    <input class="fx" type="number" id="edad" min="16" max="120">
+        <label for="edad">Ingrese su edad</label>
+        <input class="fx" type="number" id="edad" min="16" max="120">
 
-    <label for="direccion">Dirección</label>
-    <textarea name="direccion" cols="40" rows="4" id="direccion"></textarea>
+        <label for="direccion">Dirección</label>
+        <textarea name="direccion" cols="40" rows="4" id="direccion"></textarea>
 
-    <label for="provincia">Provincia:</label>
-    <input list="ppatagonicas" id="provincia" placeholder="Ingresa tu provincia">
-    <datalist id="ppatagonicas">
-        <option value="Chubut">
-        <option value="Neuquén">
-        <option value="Río Negro">
-        <option value="Santa Cruz">
-        <option value="Tierra del Fuego">
-    </datalist>
+        <label for="provincia">Provincia:</label>
+        <input list="ppatagonicas" id="provincia" placeholder="Ingresa tu provincia">
+        <datalist id="ppatagonicas">
+            <option value="Chubut">
+            <option value="Neuquén">
+            <option value="Río Negro">
+            <option value="Santa Cruz">
+            <option value="Tierra del Fuego">
+        </datalist>
 
-    <label for="cp">Código Postal</label>
-    <!--    AGREGUE EL REQUIRED PARA PODER VALIDAR EL PATTERN, NO LO SOLICITABA LA CONSIGNA POR ESO ACLARO-->
-    <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="[A-Z]\d{4}[A-Z]{3}" required>
+        <label for="cp">Código Postal</label>
+        <!--    AGREGUE EL REQUIRED PARA PODER VALIDAR EL PATTERN, NO LO SOLICITABA LA CONSIGNA POR ESO ACLARO-->
+        <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="[A-Z]\d{4}[A-Z]{3}" required>
 
-    <fieldset class="campos">
-        <legend>Método preferido de contacto</legend>
-        <input class="radio" type="radio" name="contacto" id="contacto1" value="correo electronico" checked>
-        <input class="radio" type="radio" name="contacto" id="contacto2" value="correo postal">
-        <input class="radio" type="radio" name="contacto" id="contacto3" value="telefono">
-        <label class="desc" for="contacto1">Correo Electrónico</label>
-        <label class="desc" for="contacto2">Correo Postal</label>
-        <label class="desc" for="contacto3">Teléfono</label>
-    </fieldset>
-    <fieldset class="campos">
-        <legend>Tipo de suscripción</legend>
-        <input class="radio" type="checkbox" name="suscripcion" id="promociones" value="promociones">
-        <input class="radio" type="checkbox" name="suscripcion" id="alertas" value="alertas" checked>
-        <input class="radio" type="checkbox" name="suscripcion" id="eventos" value="eventos">
-        <label class="desc" for="promociones">Promociones</label>
-        <label class="desc" for="alertas">Alertas</label>
-        <label class="desc" for="eventos">Eventos</label>
-    </fieldset>
-    <input type="button" name="btn" id="btn" value="Cargar">
-    <!-- AGREGUE UN SUBMIT Y UN REQUIRED EN EL CODIGO POSTAL PARA QUE DE ESA MANERA FUNCIONE EL PATTERN-->
-    <input type="submit" value="submit">
-</form>
+        <fieldset class="campos">
+            <legend>Método preferido de contacto</legend>
+            <input class="radio" type="radio" name="contacto" id="contacto1" value="correo electronico" checked>
+            <input class="radio" type="radio" name="contacto" id="contacto2" value="correo postal">
+            <input class="radio" type="radio" name="contacto" id="contacto3" value="telefono">
+            <label class="desc" for="contacto1">Correo Electrónico</label>
+            <label class="desc" for="contacto2">Correo Postal</label>
+            <label class="desc" for="contacto3">Teléfono</label>
+        </fieldset>
+        <fieldset class="campos">
+            <legend>Tipo de suscripción</legend>
+            <input class="radio" type="checkbox" name="suscripcion" id="promociones" value="promociones">
+            <input class="radio" type="checkbox" name="suscripcion" id="alertas" value="alertas" checked>
+            <input class="radio" type="checkbox" name="suscripcion" id="eventos" value="eventos">
+            <label class="desc" for="promociones">Promociones</label>
+            <label class="desc" for="alertas">Alertas</label>
+            <label class="desc" for="eventos">Eventos</label>
+        </fieldset>
+        <input type="button" name="btn" id="btn" value="Cargar">
+        <!-- AGREGUE UN SUBMIT Y UN REQUIRED EN EL CODIGO POSTAL PARA QUE DE ESA MANERA FUNCIONE EL PATTERN-->
+        <input type="submit" value="submit">
+    </form>
+</div>
 <div class="contenedorTabla">
     <table class="tabla">
         <thead>
@@ -134,6 +136,7 @@
     <p>👨🏼‍🎓 Nodo CURZA San Antonio Oeste 👨🏼‍🎓</p>
     <p>&copy; Derechos Reservados ©️</p>
 </footer>
+<a href="#up"><img class="up_arrow" src="./img/up-arrow.svg" alt=""></a>
 <script src="./js/script.js"></script>
 </body>
 </html>
