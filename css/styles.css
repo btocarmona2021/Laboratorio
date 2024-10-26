@@ -99,11 +99,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.logo_y_bienvenida{
+
+.logo_y_bienvenida {
     width: 60%;
     height: auto;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     background-color: #555555;
@@ -111,7 +112,8 @@ body {
     opacity: 0.8;
 
 }
-.bienvenida__logo{
+
+.bienvenida__logo {
     width: 120px;
     height: 120px;
     animation: logo_animacion 3s;
@@ -124,7 +126,7 @@ body {
         transform: rotate(0);
     }
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
 
     }
 }
@@ -155,7 +157,8 @@ main {
     background-color: #03506d;
     text-align: center;
 }
-main h3{
+
+main h3 {
     margin: 0;
     font-size: 1.8em;
 }
@@ -168,7 +171,8 @@ footer {
     padding: 15px 0;
     color: whitesmoke;
 }
-.up_arrow{
+
+.up_arrow {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -184,11 +188,12 @@ footer {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
+
 @keyframes up_arrow_animacion {
-    0%{
+    0% {
         opacity: 0.5;
     }
-    100%{
+    100% {
         transform: translateY(-10px);
         background-color: darkred;
         opacity: 1;
@@ -222,7 +227,8 @@ footer img {
     .cabecera__menu--item {
         text-align: center;
     }
-    .contenedor{
+
+    .contenedor {
         margin-top: 450px;
         display: flex;
         flex-direction: column;
@@ -237,12 +243,13 @@ footer img {
         width: 100%;
         height: auto;
     }
+
     main {
         width: 100%;
         height: 300px;
     }
 
-    .logo_y_bienvenida{
+    .logo_y_bienvenida {
         width: 100%;
     }
 }
