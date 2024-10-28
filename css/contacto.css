@@ -122,7 +122,7 @@ input, textarea {
     width: 40%;
 }
 
-
+/* Desde 100px hasta 768px, el formulario será del 86% */
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
     .contenedor__formulario {
         width: 98%;
