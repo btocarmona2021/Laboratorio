@@ -43,7 +43,43 @@ main {
         flex-direction: column;
     }
 
+    /* Estilos específicos para iPhone 12 Pro */
+    .cabecera {
+        padding: 0;
+        flex-direction: column;
+    }
 
+    .cabecera__menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cabecera__menu--item {
+        text-align: center;
+    }
+
+    .contenedor {
+        margin-top: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    main {
+        width: 100%;
+        height: 300px;
+    }
+    
 }
 
 
