@@ -214,9 +214,8 @@ footer img {
     background-color: rgba(1, 35, 47, 0.61);
 }
 
-/* iPhone 12 Pro */
+
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
-    /* Estilos específicos para iPhone 12 Pro */
     .cabecera {
         padding: 0;
         flex-direction: column;
