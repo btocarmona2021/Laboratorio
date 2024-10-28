@@ -54,7 +54,7 @@ main {
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
     /* Estilos específicos para iPhone 12 Pro */
     .contendor__acerca {
-        margin-top: 270px;
+        margin-top: 90px;
         flex-direction: column;
     }
 

@@ -130,6 +130,10 @@ input, textarea {
         margin: 0 auto;
     }
 
+    .cabecera {
+        position: static;
+    }
+
     .contenedorTabla {
         width: 98%;
     }
