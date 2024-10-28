@@ -215,7 +215,7 @@ footer img {
 }
 
 /* iPhone 12 Pro */
-@media only screen and (min-width: 300px) and (max-width: 767px) {
+@media only screen and (min-width: 300px) and (max-width: 1080px) {
     /* Estilos específicos para iPhone 12 Pro */
     .cabecera {
         padding: 0;
@@ -255,8 +255,8 @@ footer img {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1366px) {
-    /* Estilos específicos para iPad */
+@media only screen and (min-width: 1081px) and (max-width: 1366px) {
+
     .cabecera {
         padding: 0;
     }
