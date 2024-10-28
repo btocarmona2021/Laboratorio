@@ -12,9 +12,9 @@ main {
 }
 
 .acercademi {
-
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .contendor__acerca main img {
@@ -35,44 +35,24 @@ main {
     position: fixed;
 }
 
+/* iPhone 12 Pro */
+@media only screen and (min-width: 300px) and (max-width: 1080px) {
+    /* Estilos específicos para iPhone 12 Pro */
+    .contendor__acerca {
+        margin-top: 270px;
+        flex-direction: column;
+    }
 
-/*@media only screen and (min-width: 300px) and (max-width: 1080px) {*/
-/*    .contenedor__formulario {*/
-/*        width: 98%;*/
-/*        font-size: 0.65rem;*/
-/*        margin: 0 auto;*/
-/*    }*/
 
-/*    .contendor__acerca {*/
-/*        flex-direction: column;*/
-/*        margin-top: 270px;*/
-/*    }*/
+}
 
-/*    main {*/
-/*        height: auto;*/
-/*    }*/
 
-/*    .contenedorTabla {*/
-/*        width: 98%;*/
-/*    }*/
-/*}*/
+@media only screen and (min-width: 1081px) and (max-width: 1366px) {
+    /* Estilos específicos para iPad */
 
-/*@media only screen and (min-width: 1081px) and (max-width: 1366px) {*/
-/*    .contenedor__formulario {*/
-/*        width: 60%;*/
-/*    }*/
+}
 
-/*    .contenedorTabla {*/
-/*        width: 60%;*/
-/*    }*/
-/*}*/
 
-/*@media only screen and (min-width: 1377px) {*/
-/*    .contenedor__formulario {*/
-/*        width: 34%;*/
-/*    }*/
+@media only screen and (min-width: 1367px) {
 
-/*    .contenedorTabla {*/
-/*        width: 40%;*/
-/*    }*/
-/*}*/
+}
