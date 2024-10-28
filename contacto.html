@@ -25,26 +25,30 @@
     <form class="contenedor__formulario" action="">
         <h1>Contacto</h1>
         <label for="nombre">Nombre: (requerido)</label>
-        <input class="fx" type="text" name="nombre" id="nombre" maxlength="20" required placeholder="Ingresa tu Nombre">
+        <input class="fx" type="text" name="nombre" id="nombre" maxlength="20" required
+               placeholder="Ingresa tu Nombre" oninput=rellenaCampo(this.name,this.value)>
 
         <label for="apellido">Apellido</label>
-        <input class="fx" type="text" name="apellido" id="apellido" maxlength="20" placeholder="Ingresa tu Apellido">
+        <input class="fx" type="text" name="apellido" id="apellido" maxlength="20"
+               placeholder="Ingresa tu Apellido" oninput=rellenaCampo(this.name,this.value)>
 
         <label for="email">Email: (requerido)</label>
-        <input class="fx" type="email" name="email" id="email" required>
+        <input class="fx" type="email" name="email" id="email" required oninput=rellenaCampo(this.name,this.value)>
 
         <label for="telefono">teléfno</label>
-        <input class="fx" type="tel" name="telefono" id="telefono" placeholder="XXX XXXXXX" onclick="quitarAyuda()">
+        <input class="fx" type="tel" name="telefono" id="telefono" placeholder="XXX XXXXXX" onclick="quitarAyuda()"
+               oninput=rellenaCampo(this.name,this.value)>
         <p id="ayuda">Formato: 2920 286545 (4 dígitos + espacio + 6 dígitos)</p>
 
         <label for="edad">Ingrese su edad</label>
-        <input class="fx" type="number" id="edad" min="16" max="120">
+        <input class="fx" type="number" name="edad" id="edad" min="16" max="120" oninput=rellenaCampo(this.name,this.value)>
 
         <label for="direccion">Dirección</label>
-        <textarea name="direccion" cols="40" rows="4" id="direccion"></textarea>
+        <textarea name="direccion" cols="40" rows="4" id="direccion" oninput=rellenaCampo(this.name,this.value)></textarea>
 
         <label for="provincia">Provincia:</label>
-        <input list="ppatagonicas" id="provincia" placeholder="Ingresa tu provincia">
+        <input list="ppatagonicas" name="provincia" id="provincia" placeholder="Ingresa tu provincia"
+               oninput=rellenaCampo(this.name,this.value)>
         <datalist id="ppatagonicas">
             <option value="Chubut">
             <option value="Neuquén">
@@ -55,22 +59,29 @@
 
         <label for="cp">Código Postal</label>
         <!--    AGREGUE EL REQUIRED PARA PODER VALIDAR EL PATTERN, NO LO SOLICITABA LA CONSIGNA POR ESO ACLARO-->
-        <input type="text" name="cp" id="cp" placeholder="Ej: A1234BC" pattern="[A-Z]\d{4}[A-Z]{3}" required>
+        <input type="text" name="codigopostal" id="cp" placeholder="Ej: A1234BC" pattern="[A-Z]\d{4}[A-Z]{3}" required
+               oninput=rellenaCampo(this.name,this.value)>
 
         <fieldset class="campos">
             <legend>Método preferido de contacto</legend>
-            <input class="radio" type="radio" name="contacto" id="contacto1" value="correo electronico" checked>
-            <input class="radio" type="radio" name="contacto" id="contacto2" value="correo postal">
-            <input class="radio" type="radio" name="contacto" id="contacto3" value="telefono">
+            <input class="radio" type="radio" name="contacto" id="contacto1" value="correo electronico" checked
+                   oninput=rellenaCampo(this.name,this.value)>
+            <input class="radio" type="radio" name="contacto" id="contacto2" value="correo postal"
+                   oninput=rellenaCampo(this.name,this.value)>
+            <input class="radio" type="radio" name="contacto" id="contacto3" value="telefono"
+                   oninput=rellenaCampo(this.name,this.value)>
             <label class="desc" for="contacto1">Correo Electrónico</label>
             <label class="desc" for="contacto2">Correo Postal</label>
             <label class="desc" for="contacto3">Teléfono</label>
         </fieldset>
         <fieldset class="campos">
             <legend>Tipo de suscripción</legend>
-            <input class="radio" type="checkbox" name="suscripcion" id="promociones" value="promociones">
-            <input class="radio" type="checkbox" name="suscripcion" id="alertas" value="alertas" checked>
-            <input class="radio" type="checkbox" name="suscripcion" id="eventos" value="eventos">
+            <input class="radio" type="checkbox" name="suscripcion" id="promociones" value="promociones"
+                   oninput=rellenaCampo(this.name,this.value)>
+            <input class="radio" type="checkbox" name="suscripcion" id="alertas" value="alertas"
+                   oninput=rellenaCampo(this.name,this.value)>
+            <input class="radio" type="checkbox" name="suscripcion" id="eventos" value="eventos"
+                   oninput=rellenaCampo(this.name,this.value)>
             <label class="desc" for="promociones">Promociones</label>
             <label class="desc" for="alertas">Alertas</label>
             <label class="desc" for="eventos">Eventos</label>
@@ -91,43 +102,43 @@
         <tbody>
         <tr>
             <td>Nombre</td>
-            <td></td>
+            <td id="tdnombre"></td>
         </tr>
         <tr>
             <td>Apellido</td>
-            <td></td>
+            <td id="tdapellido"></td>
         </tr>
         <tr>
             <td>Email</td>
-            <td></td>
+            <td id="tdemail"></td>
         </tr>
         <tr>
             <td>Teléfono</td>
-            <td></td>
+            <td id="tdtelefono"></td>
         </tr>
         <tr>
             <td>Edad</td>
-            <td></td>
+            <td id="tdedad"></td>
         </tr>
         <tr>
             <td>Dirección</td>
-            <td></td>
+            <td id="tddireccion"></td>
         </tr>
         <tr>
             <td>Provincia</td>
-            <td></td>
+            <td id="tdprovincia"></td>
         </tr>
         <tr>
             <td>Código Postal</td>
-            <td></td>
+            <td id="tdcodigopostal"></td>
         </tr>
         <tr>
             <td>Contacto</td>
-            <td></td>
+            <td id="tdcontacto"></td>
         </tr>
         <tr>
             <td>Suscripción</td>
-            <td></td>
+            <td id="tdsuscripcion"></td>
         </tr>
         </tbody>
     </table>

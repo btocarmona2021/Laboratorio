@@ -35,6 +35,21 @@ main {
     position: fixed;
 }
 
+.acercademi__btn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+.acercademi__btn:hover {
+    font-size: 1.1em;
+}
+
 /* iPhone 12 Pro */
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
     /* Estilos específicos para iPhone 12 Pro */
