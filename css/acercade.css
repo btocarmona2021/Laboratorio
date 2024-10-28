@@ -35,7 +35,14 @@ main {
     position: fixed;
 }
 
+
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
+    .contenedor__formulario {
+        width: 98%;
+        font-size: 0.65rem;
+        margin: 0 auto;
+    }
+
     .contendor__acerca {
         flex-direction: column;
         margin-top: 270px;
@@ -43,5 +50,29 @@ main {
 
     main {
         height: auto;
+    }
+
+    .contenedorTabla {
+        width: 98%;
+    }
+}
+
+@media only screen and (min-width: 1081px) and (max-width: 1366px) {
+    .contenedor__formulario {
+        width: 60%;
+    }
+
+    .contenedorTabla {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1377px) {
+    .contenedor__formulario {
+        width: 34%;
+    }
+
+    .contenedorTabla {
+        width: 40%;
     }
 }
