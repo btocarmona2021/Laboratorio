@@ -112,6 +112,20 @@ body {
     justify-content: space-between;
 }
 
+#juego__numero {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 4em;
+    font-family: Chackra, serif;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    color: whitesmoke;
+    background: -moz-radial-gradient(blue, black);
+}
+
 .logo_y_bienvenida {
     width: 100%;
     height: auto;
