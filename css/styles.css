@@ -122,7 +122,7 @@ body {
     border-radius: 50%;
     border: 2px solid black;
     padding: 10px;
-    color: whitesmoke;
+    color: black;
     background: -moz-radial-gradient(blue, black);
 }
 
