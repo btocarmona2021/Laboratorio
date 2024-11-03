@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.principal {
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/img/background.webp");
+    background-size: cover;
+}
+
+.principal__juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.principal__intro {
+    margin: 5px auto 0 auto;
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.intro__imagen {
+    width: 200px;
+}
+
+.principal__juego {
+    width: 100%;
+    height: 500px;
+}
+
+#juego__gif {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: none;
+    transition: 0.3s;
+}
+
+@keyframes homero {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#juego__num--generado {
+    font-family: Chackra, serif;
+    font-size: 2em;
+    display: none;
+}
+
+#juego__estado {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation-name: homero;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+#juego__numero {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 4em;
+    font-family: Chackra, serif;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    color: whitesmoke;
+    background: -moz-radial-gradient(blue, black);
+}
+
+#juego__comprobar {
+    display: none;
+}
+
+.juego__comenzar {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 1.5em;
+    font-family: Chackra, serif;
+    font-weight: 700;
+    background-color: darkorange;
+    border-radius: 8px;
+    border: 3px solid darkmagenta;
+}
+
+.juego__insercion {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}

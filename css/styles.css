@@ -43,6 +43,13 @@ body {
     display: inline-block;
 }
 
+.prueba {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    overflow: scroll;
+}
+
 .cabecera__menu--subtitulo {
     display: inline-block;
 }

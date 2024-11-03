@@ -23,20 +23,18 @@ main {
 }
 
 .acercademi__bibliografia {
-    position: relative;
-    height: 300px;
-    width: 280px;
-    overflow: scroll;
+    height: auto;
+    width: 50%;
     text-align: justify-all;
 }
 
 .acercademi__bibliografia::first-line {
-    color: darkred;
+    color: whitesmoke;
     position: fixed;
 }
 
-.acercademi__btn {
-    width: 150px;
+#acercademi__btn {
+    width: 160px;
     height: 40px;
     padding: 10px 20px;
     background-color: #333333;
@@ -46,8 +44,13 @@ main {
     transition: 0.3s;
 }
 
-.acercademi__btn:hover {
+#acercademi__btn:hover {
     font-size: 1.1em;
+}
+
+#mas {
+    display: none;
+    transition: 0.3s;
 }
 
 /* iPhone 12 Pro */
@@ -57,10 +60,7 @@ main {
         margin-top: 90px;
         flex-direction: column;
     }
-
-
 }
-
 
 @media only screen and (min-width: 1081px) and (max-width: 1366px) {
     /* Estilos específicos para iPad */

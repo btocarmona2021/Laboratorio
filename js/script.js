@@ -22,3 +22,24 @@ function rellenaCampo(name, valor) {
     }
     elemento.innerText = valor;
 }
+
+function leerMasOMenos() {
+    const leerMas = document.getElementById('leer_mas');
+    const mas = document.getElementById('mas');
+    const btnMas = document.getElementById('acercademi__btn');
+
+    if (leerMas.style.display === 'none') {
+        leerMas.style.display = 'inline';
+        btnMas.innerText = 'Leer más';
+        mas.style.display = 'none';
+    } else {
+        leerMas.style.display = 'none';
+        btnMas.innerText = 'Ocultar CV';
+        mas.style.display = 'inline';
+    }
+
+}
+
+
+
+
