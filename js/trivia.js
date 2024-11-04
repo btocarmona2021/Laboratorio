@@ -482,13 +482,21 @@ const resetOpciones = () => {
 const comprueba = (target) => {
     if (preguntas[preguntaAleatoria].respuesta === target.innerText) {
         puntos.innerText = (parseInt(puntos.innerText) + (intento === 0 ? 10 : intento === 1 ? 5 : 3));
+
         target.style.backgroundColor = "green";
+        acierto.currentTime = 0;
         acierto.play();
+        [opcion1, opcion2, opcion3].forEach(opcion => {
+            if (opcion.id !== target.id) {
+                opcion.setAttribute("disabled", "true");
+            }
+        })
         setTimeout(() => {
             generaPregunta();
             cantPreguntas.innerText = parseInt(cantPreguntas.innerText) + 1;
         }, 1000);
     } else {
+        error.currentTime = 0;
         error.play();
         intento++;
         if (parseInt(puntos.innerText) >= 3) {
@@ -516,6 +524,7 @@ resetear.addEventListener('click', () => {
     clock.currentTime = 0;
     [opcion1, opcion2, opcion3].forEach(opcion => {
         opcion.innerText = '';
+        opcion.setAttribute("disabled", "true");
     })
     pregunta.innerText = "¿Quieres volver a intentar para mejorar tu puntaje?"
 });
