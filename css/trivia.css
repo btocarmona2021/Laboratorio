@@ -40,9 +40,7 @@ main {
 .juego__preguntas {
     height: 35%;
     width: 100%;
-    background-image: url("/img/html.webp");
-    background-size: cover;
-    background-position: bottom;
+    background: -moz-linear-gradient(darkmagenta, #333333, darkmagenta);
     opacity: 0.9;
     display: flex;
     align-items: center;
