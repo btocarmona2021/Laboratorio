@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("/img/backgroundtrivia.webp");
+    background-image: url("./img/backgroundtrivia.webp");
     background-size: cover;
 
 }
@@ -40,7 +40,7 @@ main {
 .juego__preguntas {
     height: 35%;
     width: 100%;
-    background-image: url("/img/background.jpg");
+    background-image: url("./img/background.jpg");
     background-size: cover;
     background-position: bottom;
     opacity: 0.9;
