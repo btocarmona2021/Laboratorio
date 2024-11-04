@@ -7,18 +7,23 @@
 body {
     background-image: url("/img/backgroundtrivia.webp");
     background-size: cover;
+
 }
 
 main {
-    margin: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: auto;
     background-color: transparent;
 }
 
 #juego {
-    margin: 10px;
+    margin: 30px;
     position: relative;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    height: 600px;
 }
 
 .juego__info {
@@ -64,6 +69,15 @@ main {
     border-bottom: 4px solid;
 }
 
+#dialogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+}
+
 .opciones__menu {
     display: flex;
     flex-direction: column;
@@ -79,7 +93,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+
 }
 
 .juego__inicio div {
@@ -90,7 +104,10 @@ main {
 
 .juego__botones {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 0 30px;
 }
 
 .juego__botones button {
