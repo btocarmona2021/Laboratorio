@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/img/backgroundtrivia.webp");
+    background-size: cover;
+}
+
+main {
+    margin: auto;
+    background-color: transparent;
+}
+
+#juego {
+    margin: 10px;
+    position: relative;
+    width: 400px;
+    height: 500px;
+}
+
+.juego__info {
+    width: 100%;
+    height: 15%;
+    background-color: darkmagenta;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 4px solid;
+    border-radius: 15px 15px 0 0;
+}
+
+.juego__preguntas {
+    height: 35%;
+    width: 100%;
+    background-image: url("/img/html.webp");
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.juego__preguntas p {
+    font-size: 1.3em;
+    color: whitesmoke;
+    font-weight: bolder;
+    background-color: rgba(1, 35, 47, 0.89);
+    width: 100%;
+    height: auto;
+}
+
+.juego__opciones {
+    height: 50%;
+    background-color: #710271;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+    border-bottom: 4px solid;
+}
+
+.opciones__menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0;
+}
+
+.juego__inicio {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.juego__inicio div {
+    display: flex;
+    gap: 20px;
+    color: #17c017;
+}
+
+.juego__botones {
+    display: flex;
+    gap: 10px;
+}
+
+.juego__botones button {
+    padding: 10px;
+    background-color: darkorange;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#select {
+    width: 60px;
+    height: 30px;
+}
+
+.opcion {
+    list-style: none;
+    width: 90%;
+    height: 36px;
+    align-items: center;
+    padding: 2px 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-family: Chackra, serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 0 3px 2px black;
+    cursor: pointer;
+}
+
+.info__titulo {
+    font-family: Chackra, serif;
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: #17c017;
+    text-transform: uppercase;
+}
+
+.juego__opciones p {
+    font-size: 1.2em;
+    color: whitesmoke;
+    background-color: #333333;
+    padding: 2px;
+    width: 100%;
+}
+
+#info__puntos {
+    font-family: Chackra, serif;
+    color: orange;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#juego::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/backgroundpreguntas.png");
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    border: 4px solid whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 3px;
+}
