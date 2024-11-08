@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ppt.css">
+    <title>Piedra - Papel - Tijera</title>
+</head>
+<body>
+<main>
+    <section class="juego-contador">
+        <!--        <img class="portada" src="./img/ppt/background-ppt.jpg" alt="">-->
+        <button id="btn_comenzar">Comenzar</button>
+        <!--        <p id="contador">1</p>-->
+        <!--        <button id="btn_comenzar" class="btn_comenzar">Comenzar</button>-->
+    </section>
+    <section class="juegoppt">
+        <div class="juegoppt__player">
+            <div>
+                <p id="player-pc__puntos" class="player__leyenda">0</p>
+                <p class="player__leyenda">Puntos Pc</p>
+            </div>
+            <img class="jugada" id="pc-jugada" src="./img/ppt/back.png" alt="">
+            <img id="pc-estado" src="./img/ppt/back.png" alt="">
+        </div>
+        <div class="juegoppt__player">
+            <div>
+                <p id="player-human__puntos" class="player__leyenda">0</p>
+                <p class="player__leyenda">Tús puntos</p>
+            </div>
+            <img class="jugada" id="human-jugada" src="./img/ppt/back.png" alt="">
+            <img id="human-estado" src="./img/ppt/back.png" alt="">
+        </div>
+        <div class="botones">
+            <button id="btn-tijera" disabled><img class="btn-ppt" src="./img/ppt/ppt_2.webp" alt=""></button>
+            <button id="btn-piedra" disabled><img class="btn-ppt" src="./img/ppt/ppt_4.webp" alt=""></button>
+            <button id="btn-papel" disabled><img class="btn-ppt" src="img/ppt/ppt_6.webp" alt=""></button>
+            <p id="tiempo" class="player__leyenda">30</p>
+        </div>
+        <script src="./js/ppt.js"></script>
+    </section>
+</main>
+
+</body>
+</html>
