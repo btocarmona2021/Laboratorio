@@ -44,6 +44,7 @@ const generaNumero = () => {
 }
 
 let accion;
+
 botonesJ.addEventListener('click', (ev) => {
     if (ev.target.closest('#btn-tijera')) {
         seteaImagen('PPT')
