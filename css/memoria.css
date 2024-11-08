@@ -10,13 +10,13 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: auto;
     padding: 30px;
 }
 
 .juego {
-    width: 540px;
+    width: 600px;
     height: auto;
     margin: auto;
     padding: 20px;

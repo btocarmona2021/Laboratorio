@@ -94,6 +94,8 @@ const puntaje = document.getElementById('puntaje');
 const usuario = document.getElementById('usuario');
 const tiempo = document.getElementById('tiempo');
 
+//sonidos
+const fondoCartas = new Audio('./music/fondocartas.mp3')
 
 function barajar() {
     ejecutaSonido(barajarSound);
@@ -113,6 +115,7 @@ function barajar() {
         }
         indice++;
     }, 170)
+    ejecutaSonido(fondoCartas);
 }
 
 const reset = () => {
