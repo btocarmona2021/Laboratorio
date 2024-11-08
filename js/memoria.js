@@ -115,7 +115,9 @@ function barajar() {
         }
         indice++;
     }, 170)
+    fondoCartas.loop = true;
     ejecutaSonido(fondoCartas);
+
 }
 
 const reset = () => {
@@ -188,6 +190,7 @@ const tiempoTranscurrido = () => {
         if (parseInt(puntaje.innerText) === 1000) {
             clearInterval(temporizador);
             alert(`Bien hecho obtuviste 1000 puntos en ${tiempo.innerText} segundos`)
+            // fondoCartas.pause();
             reset();
         }
     }, 1000)
