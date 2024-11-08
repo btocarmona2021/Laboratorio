@@ -15,15 +15,15 @@ const tiempo = document.getElementById('tiempo');
 let manos = [
     {
         mano: "Tijera",
-        ruta: "../img/ppt/ppt_1.webp"
+        ruta: "./img/ppt/ppt_1.webp"
     },
     {
         mano: "Piedra",
-        ruta: "../img/ppt/ppt_3.webp"
+        ruta: "./img/ppt/ppt_3.webp"
     },
     {
         mano: "Papel",
-        ruta: "../img/ppt/ppt_5.webp"
+        ruta: "./img/ppt/ppt_5.webp"
     }
 ]
 
@@ -89,8 +89,8 @@ const reseteoJuego = () => {
     puntosPc.innerText = "0"
     puntosHuman.innerText = "0"
     tiempo.innerText = "30"
-    pcEstado.src = "../img/malvado.gif"
-    humanEstado.src = "../img/malvado.gif"
+    pcEstado.src = "./img/malvado.gif"
+    humanEstado.src = "./img/malvado.gif"
     habilitaBootones()
     clearInterval(intervalo);
     clearTimeout(timeout);
@@ -116,18 +116,18 @@ const compruebaGanador = () => {
 const seteaImagen = (ganador) => {
     switch (ganador) {
         case "PC":
-            pcEstado.src = '../img/acerto.gif';
-            humanEstado.src = '../img/pifio.gif';
+            pcEstado.src = './img/acerto.gif';
+            humanEstado.src = './img/pifio.gif';
             puntosPc.innerText = parseInt(puntosPc.innerText) + 100;
             break;
         case "HUMAN":
-            humanEstado.src = '../img/acerto.gif';
-            pcEstado.src = '../img/pifio.gif';
+            humanEstado.src = './img/acerto.gif';
+            pcEstado.src = './img/pifio.gif';
             puntosHuman.innerText = parseInt(puntosHuman.innerText) + 100;
             break;
         case "EMPATE":
-            pcEstado.src = '../img/malvado.gif';
-            humanEstado.src = '../img/malvado.gif';
+            pcEstado.src = './img/malvado.gif';
+            humanEstado.src = './img/malvado.gif';
             puntosPc.innerText = parseInt(puntosPc.innerText) + 50;
             puntosHuman.innerText = parseInt(puntosHuman.innerText) + 50;
             break;
