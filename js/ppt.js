@@ -11,6 +11,17 @@ const btnTijera = document.querySelector('#btn-tijera');
 const btnPiedra = document.querySelector('#btn-piedra');
 const btnPapel = document.querySelector('#btn-papel');
 const tiempo = document.getElementById('tiempo');
+//sonidos
+const music = new Audio('./music/musicbackground.mp3');
+const ganar = new Audio('./music/ganar.mp3');
+const iniciar = new Audio('./music/iniciar.mp3');
+const perder = new Audio('./music/perder.mp3');
+const terminar = new Audio('./music/terminar.mp3');
+const pierdefinal = new Audio('./music/pierdefinal.mp3');
+const ppt = new Audio('./music/ppt.mp3');
+const empate = new Audio('./music/empate.mp3');
+const campeon = new Audio('./music/campeon.mp3');
+
 
 let manos = [
     {
@@ -32,22 +43,35 @@ const generaNumero = () => {
     return Math.floor(Math.random() * 3);
 }
 
+let accion;
 botonesJ.addEventListener('click', (ev) => {
     if (ev.target.closest('#btn-tijera')) {
-        jugadaHuman.src = './img/ppt/ppt_2.webp';
-        jugadaHuman.name = "Tijera";
-        juegaPC()
-        compruebaGanador()
+        seteaImagen('PPT')
+        ejecutaSonido(ppt);
+        accion = setTimeout(() => {
+            jugadaHuman.src = './img/ppt/ppt_2.webp';
+            jugadaHuman.name = "Tijera";
+            juegaPC()
+            compruebaGanador()
+        }, 1200);
     } else if (ev.target.closest('#btn-piedra')) {
-        jugadaHuman.src = './img/ppt/ppt_4.webp';
-        jugadaHuman.name = "Piedra";
-        juegaPC()
-        compruebaGanador()
+        seteaImagen('PPT')
+        ejecutaSonido(ppt);
+        accion = setTimeout(() => {
+            jugadaHuman.src = './img/ppt/ppt_4.webp';
+            jugadaHuman.name = "Piedra";
+            juegaPC()
+            compruebaGanador()
+        }, 1200);
     } else if (ev.target.closest('#btn-papel')) {
-        jugadaHuman.src = './img/ppt/ppt_6.webp';
-        jugadaHuman.name = "Papel";
-        juegaPC()
-        compruebaGanador()
+        seteaImagen('PPT')
+        ejecutaSonido(ppt);
+        accion = setTimeout(() => {
+            jugadaHuman.src = './img/ppt/ppt_6.webp';
+            jugadaHuman.name = "Papel";
+            juegaPC()
+            compruebaGanador()
+        }, 1200);
     }
 })
 
@@ -57,22 +81,31 @@ const juegaPC = () => {
     jugadaPC.name = manos[indice].mano;
 }
 
+
 let timeout;
 let intervalo;
 const comienzaJuego = () => {
     btn_comenzar.setAttribute('disabled', 'true');
+    iniciar.volume = 0.5;
+    ejecutaSonido(iniciar)
+    ejecutaSonido(music);
     reseteoJuego();
     timeout = setTimeout(() => {
         deshabilitaBootones()
         clearInterval(intervalo);
         btn_comenzar.removeAttribute('disabled');
         clearTimeout(timeout);
+        compruebaFinal();
     }, 31000)
     intervalo = setInterval(() => {
         tiempo.innerText = parseInt(tiempo.innerText) - 1;
     }, 1000)
 }
 
+const ejecutaSonido = (sonido) => {
+    sonido.currentTime = 0;
+    sonido.play();
+}
 
 const deshabilitaBootones = () => {
     btnTijera.setAttribute('disabled', 'true');
@@ -113,23 +146,38 @@ const compruebaGanador = () => {
     const ganador = resultados[`${jugadaPC.name}-${jugadaHuman.name}`];
     seteaImagen(ganador);
 }
+const compruebaFinal = () => {
+    if (parseInt(puntosPc.innerText) < parseInt(puntosHuman.innerText)) {
+        ejecutaSonido(campeon);
+    } else {
+        ejecutaSonido(pierdefinal);
+    }
+}
+
 const seteaImagen = (ganador) => {
     switch (ganador) {
         case "PC":
             pcEstado.src = './img/acerto.gif';
             humanEstado.src = './img/pifio.gif';
             puntosPc.innerText = parseInt(puntosPc.innerText) + 100;
+            ejecutaSonido(perder)
             break;
         case "HUMAN":
             humanEstado.src = './img/acerto.gif';
             pcEstado.src = './img/pifio.gif';
             puntosHuman.innerText = parseInt(puntosHuman.innerText) + 100;
+            ejecutaSonido(ganar);
             break;
         case "EMPATE":
             pcEstado.src = './img/malvado.gif';
             humanEstado.src = './img/malvado.gif';
             puntosPc.innerText = parseInt(puntosPc.innerText) + 50;
             puntosHuman.innerText = parseInt(puntosHuman.innerText) + 50;
+            ejecutaSonido(empate);
+            break;
+        case"PPT":
+            jugadaPC.src = "./img/ppt/back.png"
+            jugadaHuman.src = "./img/ppt/back.png"
             break;
     }
 }
