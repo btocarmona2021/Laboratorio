@@ -10,6 +10,7 @@
     font-style: normal;
 }
 
+
 main {
     margin: auto;
     width: 100%;
@@ -162,4 +163,14 @@ main {
     background-color: transparent;
     box-shadow: none;
     opacity: 0.2;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1081px) {
+    .juegoppt {
+        width: 80%;
+    }
+
+    .player__leyenda {
+        font-size: 1.8em;
+    }
 }
