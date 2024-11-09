@@ -223,12 +223,16 @@ footer img {
 }
 
 /* iPhone 12 Pro */
-@media only screen and (min-width: 300px) and (max-width: 1081px) {
+@media only screen and (min-width: 300px) and (max-width: 1080px) {
     /* Estilos específicos para iPhone 12 Pro */
     .cabecera {
         position: static;
         padding: 0;
         flex-direction: column;
+    }
+
+    .espaciador {
+        height: 140px;
     }
 
     .cabecera__menu {
