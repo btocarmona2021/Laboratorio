@@ -188,9 +188,9 @@ const tiempoTranscurrido = () => {
     temporizador = setInterval(() => {
         tiempo.innerText = parseInt(tiempo.innerText) + 1
         if (parseInt(puntaje.innerText) === 1000) {
+            fondoCartas.pause();
             clearInterval(temporizador);
             alert(`Bien hecho obtuviste 1000 puntos en ${tiempo.innerText} segundos`)
-            // fondoCartas.pause();
             reset();
         }
     }, 1000)
