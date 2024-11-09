@@ -15,19 +15,29 @@ main {
     padding: 10px;
 }
 
+/*.juego {*/
+/*    width: 600px;*/
+/*    height: auto;*/
+/*    margin: auto;*/
+/*    padding: 20px;*/
+/*    background-color: #333333;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    gap: 10px;*/
+/*    border-radius: 10px;*/
+/*}*/
 .juego {
-    width: 600px;
-    height: auto;
-    margin: auto;
-    padding: 20px;
-    background-color: #333333;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    border-radius: 10px;
+    align-items: center;
 }
+
 
 .juego_carta {
     position: relative;
@@ -38,6 +48,8 @@ main {
     justify-content: center;
     background-color: lightgrey;
     border-radius: 8px;
+    align-self: center;
+    justify-self: center;
 }
 
 .juego img {
@@ -113,6 +125,7 @@ main {
 }
 
 .controles__memoria {
+    width: 30%;
     filter: drop-shadow(2px -40px 50px whitesmoke);
 }
 
@@ -140,8 +153,7 @@ main {
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
     main {
         width: 100%;
-        padding: 0;
-        display: flex;
         flex-direction: column;
     }
+
 }
