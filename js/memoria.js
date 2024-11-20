@@ -81,7 +81,7 @@ const cartas = [
     }
 ]
 const vistaCartas = document.querySelectorAll('.juego IMG');
-
+const cabecera = document.querySelector()
 const juego = document.querySelector('.juego');
 const barajarSound = new Audio('./music/barajar.mp3');
 const correcto = new Audio('./music/correcto.mp3');
