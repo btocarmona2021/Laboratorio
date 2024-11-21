@@ -167,7 +167,7 @@ juego.addEventListener('click', (ev) => {
                 setTimeout(() => {
                     carta.classList.remove('carta_mod');
                     carta.closest('.juego_carta').classList.remove('carta_mod2');
-                }, 1200)
+                }, 600)
             });
             ejecutaSonido(incorrecto);
         }
