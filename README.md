@@ -26,11 +26,17 @@
 
 ### Trabajos Prácticos de las Clases de Laboratorio Web
 ## Practicos realizados.
-> Práctico 01
+> Laboratorio 01
 
-> Práctico 02
+> Laboratorio 02
 
-> Práctico 03
+> Laboratorio 03
+
+> Laboratorio 04
+
+> Laboratorio 05
+
+> Laboratorio 06
 
 [Sitio Desplegado](https://btocarmona2021.github.io/Laboratorio/)
 
