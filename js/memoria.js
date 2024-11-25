@@ -199,6 +199,7 @@ const tiempoTranscurrido = () => {
     }, 1000)
 }
 
+
 const setUsuario = () => {
     usuario.innerText = prompt("Ingresa tu nombre");
     if (usuario.innerText === '') {
